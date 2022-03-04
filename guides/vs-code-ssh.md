@@ -23,7 +23,7 @@ For those unfamiliar, a brief summary of remote development:
 
 Microsoft's VSCode is particularly well suited for this, as the extension and language support system provided by the community is still supported via the remote development, which means it _feels_ like your working on your local machine, but _executing_ on a more powerful server.
 
-This guide briefly details how to get this set-up. For illustrative purposes, I want to work with the GPU on Typhon, but I want to access Typhon via the login server Aquila.
+This guide briefly details how to get this set-up. For illustrative purposes, we want to work with the GPU on Typhon, but we want to access Typhon via the login server Aquila.
 
 ```
                         ┌┐    BRISTOL SERVERS
@@ -64,7 +64,7 @@ Clicking on this will bring up the SSH remote connection dialog. From here, we c
 
 ## SSH tunnelling <a id="toc-tag-mdtoc" name="ssh-tunnelling"></a>
 
-Because I can't access Typhon directly, I have to take an additional step to login when not using the UoB WiFi:
+Because we can't access Typhon directly, we have to take an additional step to login when not using the UoB WiFi:
 
 - SSH to Aquila, then SSH to Typhon
 - Connect to the [UoB VPN (sharepoint link)](https://uob.sharepoint.com/sites/itservices/SitePages/vpn-connect.aspx)
@@ -73,7 +73,7 @@ This section will focus on creating an SSH bridge through Aquila.
 
 The `ssh` program supports *tunneling*, which allows a machine to forward ports via SSH to another machine. This can be used to make e.g. secure web-connection, or just to forward SSH traffic.
 
-From the `ssh` manual, the `-L` flag allows us to forward, or *tunnel* traffic from one machine through to another.
+From the `ssh` manual, the `-L` flag allows us to forward, or *tunnel*, traffic from one machine through to another.
 > ```
 > -L [bind_address:]port:host:hostport
 > -L [bind_address:]port:remote_socket
@@ -92,7 +92,7 @@ Replace `TYPHON`, `AQUILA`, and `USER` with the correct domain names and your Br
 Quickly dissecting this command:
 - `-N`: Do not execute a remote command on Aquila.
 - `-L localhost:12001:TYPHON:22` bind port `12001` on our local machine (PC), such that when a connection is made to this port, it will be forwarded, via Aquila, to Typhon at port 22 (the default SSH port).
-- `USER@AQUILA` the bridge, or *tunnel*, machine where we want to pass our traffic through.
+- `USER@AQUILA` the bridge, or *tunnel*, host where we want to pass our traffic through.
 
 Note, this will login to Typhon with the *same username* as `USER`. The command will also not display anything when run, and will appear to 'hang', but this is intended!
 
