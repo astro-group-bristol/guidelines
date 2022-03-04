@@ -43,20 +43,20 @@ This guide briefly details how to get this set-up. For illustrative purposes, I 
 
 Start VSCode, and click on the "Extensions" tab on the left:
 
-<p style="text-align: center;">
+<p align="center">
 <img height="200" src="../assets/vs-code-extensions.png"/>
 </p>
 
 Search for "SSH" and install the "Remote - SSH" extension:
 
-<p style="text-align: center;">
-<img src="../assets/remote-ssh-extension.png"/>
+<p align="center">
+<img width="900" src="../assets/remote-ssh-extension.png"/>
 </p>
 
 Once installed, you will have a new status icon in the bottom left corner of VSCode
 
-<p style="text-align: center;">
-<img src="../assets/remote-status-bar.png"/>
+<p align="center">
+<img width="200" src="../assets/remote-status-bar.png"/>
 </p>
 
 Clicking on this will bring up the SSH remote connection dialog. From here, we can enter the address of a remote machine, and VSCode will open a new window with a remote session.
@@ -102,22 +102,22 @@ With the tunnel running in a terminal, we now return to VSCode and can open a re
 
 To do this, we click on the green remote session button in the bottom left corner:
 
-<p style="text-align: center;">
-<img src="../assets/remote-connect.png"/>
+<p align="center">
+<img height="300" src="../assets/remote-connect.png"/>
 </p>
 
 Select "Connect to Host", and enter point the SSH session to our local port:
 
-<p style="text-align: center;">
-<img src="../assets/remote-localhost.png"/>
+<p align="center">
+<img height="200" src="../assets/remote-localhost.png"/>
 </p>
 
 Hit enter to bring up the new remote session. You may be prompted about trusting `localhost` keys the first time you connect -- this is perfectly fine, and just click "yes".
 
 Once connected, in the bottom left corner the connection should be displayed:
 
-<p style="text-align: center;">
-<img src="../assets/remote-connection.png"/>
+<p align="center">
+<img width="400" src="../assets/remote-connection.png"/>
 </p>
 
 ## Using the extension <a id="toc-tag-mdtoc" name="using-the-extension"></a>
@@ -128,13 +128,13 @@ Now that we are set up, there are numerous things we can do.
 
 To open the file explorer, we click on the file icon in the left navigation bar at the top:
 
-<p style="text-align: center;">
-<img src="../assets/remote-file.png"/>
+<p align="center">
+<img width="600" src="../assets/remote-file.png"/>
 </p>
 
 Click "Open Folder" and either use the navigation dialog, or enter the path to a folder you want to open. The entire folder is then used as the VSCode workspace, allowing you to have multiple files open at once:
 
-<p style="text-align: center;">
+<p align="center">
 <img src="../assets/remote-workspace.png"/>
 </p>
 
@@ -144,14 +144,14 @@ VSCode's extensions support displaying many different file types, including imag
 
 We can open a new terminal from the "Terminal" menu at the top of our screen:
 
-<p style="text-align: center;">
-<img src="../assets/remote-terminal-1.png"/>
+<p align="center">
+<img width="300" src="../assets/remote-terminal-1.png"/>
 </p>
 
 This shell will be running on Typhon directly. To add more terminals, or change the terminal type, click the little "+" icon:
 
-<p style="text-align: center;">
-<img src="../assets/remote-terminal-2.png"/>
+<p align="center">
+<img width="300" src="../assets/remote-terminal-2.png"/>
 </p>
 
 ### Executing code remotely <a id="toc-tag-mdtoc" name="executing-code-remotely"></a>
