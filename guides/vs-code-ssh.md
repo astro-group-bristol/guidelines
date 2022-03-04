@@ -103,13 +103,13 @@ With the tunnel running in a terminal, we now return to VSCode and can open a re
 To do this, we click on the green remote session button in the bottom left corner:
 
 <p align="center">
-<img height="300" src="../assets/remote-connect.png"/>
+<img width="600" src="../assets/remote-connect.png"/>
 </p>
 
 Select "Connect to Host", and enter point the SSH session to our local port:
 
 <p align="center">
-<img height="200" src="../assets/remote-localhost.png"/>
+<img width="600" src="../assets/remote-localhost.png"/>
 </p>
 
 Hit enter to bring up the new remote session. You may be prompted about trusting `localhost` keys the first time you connect -- this is perfectly fine, and just click "yes".
