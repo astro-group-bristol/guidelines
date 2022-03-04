@@ -8,13 +8,23 @@ This repository contains some general information and coding practices within th
 
 <!--BEGIN TOC-->
 ## Table of Contents
-1. [Creating new repositories](#creating-new-repositories)
-2. [GitHub Workflows](#github-workflows)
-3. [Questions and Queries](#questions-and-queries)
+1. [In this repository](#in-this-repository)
+    1. [Guides](#guides)
+2. [Creating new repositories](#creating-new-repositories)
+3. [GitHub Workflows](#github-workflows)
+4. [Questions and Queries](#questions-and-queries)
 
 <!--END TOC-->
 
 <hr/>
+
+## In this repository <a id="toc-tag-mdtoc" name="in-this-repository"></a>
+
+This repository contains some (hopefully useful) guides, and general etiquette for our organization.
+
+### Guides <a id="toc-tag-mdtoc" name="guides"></a>
+
+- [VSCode secure remote development with the Bristol servers](./guides/vs-code-ssh.md)
 
 ## Creating new repositories <a id="toc-tag-mdtoc" name="creating-new-repositories"></a>
 
