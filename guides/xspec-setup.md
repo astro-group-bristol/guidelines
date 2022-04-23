@@ -11,11 +11,11 @@ A pre-built Docker image is available from DockerHub [dustpancake/heasoft](https
 docker pull dustpancake/heasoft
 ```
 
-Note this image is a hefty [9.62GB] in size, and are built directly from the [offical HEASoft Dockerfile](https://heasarc.gsfc.nasa.gov/lheasoft/docker.html) with the NICER mission-specific tools, and HEASoftPy.
+Note this image is a hefty 9.62GB in size, and is built directly from the [offical HEASoft Dockerfile](https://heasarc.gsfc.nasa.gov/lheasoft/docker.html) with the NICER mission-specific tools, and HEASoftPy.
 
 Optionally, a version can be specified with `dustpancake/heasoft:version`. At the moment, the following versions are available:
 
-- v6.30.1 11 April 2022
+- v6.30.1 (release: 11 April 2022)
 
 ### Starting a container
 
@@ -33,7 +33,7 @@ Note that only data stored in the container's `/data` directory will be saved on
 
 ### Running with X11
 
-Running with [X11](https://x.org/wiki/) graphical support allows HEASoft to display windows on your screen, which is extremely useful for any type of graphical manipulation or interactive plotting. Setting this up is very OS specific.
+Running with [X11](https://x.org/wiki/) graphical support allows HEASoft to display windows on your screen, useful for any type of graphical manipulation or interactive plotting. Setting this up is very OS specific.
 
 *If your Linux distributions or operating system is not listed, please open an issue and we'll add instructions.*
 
@@ -75,4 +75,24 @@ docker run \
     -e DISPLAY \
     -v /path/to/data/dir:/data \
     dustpancake/heasoft:6.30.1 tcsh
+```
+
+## Running XSPEC on the group servers
+
+HEASoft 6.29 is installed on the astrophysics group server.
+
+Either run the following or add it to your `.bashrc` file:
+```
+export HEADAS=/usr/local/heasoft-6.29/x86_64-pc-linux-gnu-libc2.17
+alias heainit="source $HEADAS/headas-init.sh"
+```
+
+The HEASoft software may then be access with
+```
+heainit
+```
+
+To build additional models, enable the version 9 developer toolset in your shell:
+```bash
+scl enable devtoolset-9 bash
 ```
