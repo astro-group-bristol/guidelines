@@ -25,6 +25,7 @@ This repository contains some (hopefully useful) guides, and general etiquette f
 ### Guides <a id="toc-tag-mdtoc" name="guides"></a>
 
 - [VSCode secure remote development with the Bristol servers](./guides/vs-code-ssh.md)
+- [Setting up XSPEC](./guides/xspec-setup.md)
 
 ## Creating new repositories <a id="toc-tag-mdtoc" name="creating-new-repositories"></a>
 
