@@ -4,6 +4,34 @@
 
 The source code and native installation instructions are available on the [HEASoft website](https://heasarc.gsfc.nasa.gov/lheasoft/download.html).
 
+### Native installation on M1 Mac
+
+Here are notes about how I (AJY) installed HESoft on my M1 Mac laptop (2023-01):
+
+- Install `gcc@12` with homebrew (`brew install gcc@12`)
+- Install Anaconda using the standard web installer, making sure the M1 Silicon version is used (because I unfortuantely couldn't get astropy to work with the Homebrew python)
+- Install `astropy` with `conda install astropy`
+-  Set up the paths to compilers, etc. as suggested in the [instructions](https://heasarc.gsfc.nasa.gov/lheasoft/macos.html) (replacing `your_username` with your user name). I installed HESoft in the folder where I unpacked heasoft (`your_path/heasoft-6.31.1` in the script below)
+
+```
+export CC=/usr/bin/clang
+export CXX=/usr/bin/clang++
+export PERL=/usr/bin/perl
+export FC=/opt/homebrew/bin/gfortran-12
+export PYTHON=/Users/your_username/opt/anaconda3/bin/python
+cd /Users/your_username/your_path/heasoft-6.31.1/BUILD_DIR
+./configure --prefix=/Users/your_username/your_path/heasoft-6.31.1 > config.txt 2>&1
+make > build.log 2>&1
+make install > install.log 2>&1
+```
+
+Then to run HESoft use
+
+```
+export HEADAS=/Users/your_username/your_path/heasoft-6.31.1/aarch64-apple-darwin21.6.0
+source $HEADAS/headas-init.sh
+```
+
 ## Docker
 
 A pre-built Docker image is available from DockerHub [dustpancake/heasoft](https://hub.docker.com/r/dustpancake/heasoft). To obtain it, simply
