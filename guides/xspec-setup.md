@@ -1,17 +1,29 @@
 # XSPEC Setup
 
+<!--BEGIN TOC-->
+## Table of Contents
+1. [Native installation](#native-installation)
+2. [Docker](#docker)
+    1. [Starting a container](#starting-a-container)
+    2. [Running with X11](#running-with-x11)
+        1. [OSX](#osx)
+        2. [Ubuntu / Debian](#ubuntu--debian)
+3. [Running XSPEC on the group servers](#running-xspec-on-the-group-servers)
+4. [Learning to use XSPEC](#learning-to-use-xspec)
+<!--END TOC-->
+
 ## Native installation
 
 The source code and native installation instructions are available on the [HEASoft website](https://heasarc.gsfc.nasa.gov/lheasoft/download.html).
 
 ### Native installation on M1 Mac
 
-Here are notes about how I (AJY) installed HESoft on my M1 Mac laptop (2023-01):
+Here are notes about how I (AJY) installed HEASoft on my M1 Mac laptop (2023-01):
 
 - Install `gcc@12` with homebrew (`brew install gcc@12`)
 - Install Anaconda using the standard web installer, making sure the M1 Silicon version is used (because I unfortuantely couldn't get astropy to work with the Homebrew python)
 - Install `astropy` with `conda install astropy`
--  Set up the paths to compilers, etc. as suggested in the [instructions](https://heasarc.gsfc.nasa.gov/lheasoft/macos.html) (replacing `your_username` with your user name). I installed HESoft in the folder where I unpacked heasoft (`your_path/heasoft-6.31.1` in the script below)
+-  Set up the paths to compilers, etc. as suggested in the [instructions](https://heasarc.gsfc.nasa.gov/lheasoft/macos.html) (replacing `your_username` with your user name). I installed HEASoft in the folder where I unpacked heasoft (`your_path/heasoft-6.31.1` in the script below)
 
 ```
 export CC=/usr/bin/clang
@@ -25,7 +37,7 @@ make > build.log 2>&1
 make install > install.log 2>&1
 ```
 
-Then to run HESoft use
+Then to run HEASoft use
 
 ```
 export HEADAS=/Users/your_username/your_path/heasoft-6.31.1/aarch64-apple-darwin21.6.0
@@ -124,3 +136,7 @@ To build additional models, enable the version 9 developer toolset in your shell
 ```bash
 scl enable devtoolset-9 bash
 ```
+
+## Learning to use XSPEC
+
+See the [XSPEC instruction manual](https://heasarc.gsfc.nasa.gov/docs/software/heasoft/xanadu/xspec/manual/XspecManual.html) which includes a [walk through tutorial](https://heasarc.gsfc.nasa.gov/docs/software/heasoft/xanadu/xspec/manual/node35.html).
