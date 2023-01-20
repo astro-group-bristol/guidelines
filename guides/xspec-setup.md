@@ -1,4 +1,19 @@
-# XSPEC Setup
+# HEASoft (which includes XSPEC) setup
+
+<!--BEGIN TOC-->
+## Table of Contents
+1. [Native installation](#native-installation)
+2. [Docker installation](#docker-installation)
+    1. [Starting a container](#starting-a-container)
+    2. [Running with X11](#running-with-x11)
+        1. [OSX](#osx)
+        2. [Ubuntu / Debian](#ubuntu--debian)
+3. [Calibration and CALDB](#calibration-and-caldb)
+    1. [General calibration](#general-calibration)
+    2. [NuSTAR calibration](#nustar-calibration)
+4. [Running XSPEC on the group servers](#running-xspec-on-the-group-servers)
+5. [Learning to use XSPEC](#learning-to-use-xspec)
+<!--END TOC-->
 
 ## Native installation
 
@@ -6,12 +21,12 @@ The source code and native installation instructions are available on the [HEASo
 
 ### Native installation on M1 Mac
 
-Here are notes about how I (AJY) installed HESoft on my M1 Mac laptop (2023-01):
+Here are notes about how I (AJY) installed HEASoft on my M1 Mac laptop (2023-01):
 
 - Install `gcc@12` with homebrew (`brew install gcc@12`)
 - Install Anaconda using the standard web installer, making sure the M1 Silicon version is used (because I unfortuantely couldn't get astropy to work with the Homebrew python)
 - Install `astropy` with `conda install astropy`
--  Set up the paths to compilers, etc. as suggested in the [instructions](https://heasarc.gsfc.nasa.gov/lheasoft/macos.html) (replacing `your_username` with your user name). I installed HESoft in the folder where I unpacked heasoft (`your_path/heasoft-6.31.1` in the script below)
+-  Set up the paths to compilers, etc. as suggested in the [instructions](https://heasarc.gsfc.nasa.gov/lheasoft/macos.html) (replacing `your_username` with your user name). I installed HEASoft in the folder where I unpacked heasoft (`your_path/heasoft-6.31.1` in the script below)
 
 ```
 export CC=/usr/bin/clang
@@ -25,14 +40,14 @@ make > build.log 2>&1
 make install > install.log 2>&1
 ```
 
-Then to run HESoft use
+Then to run HEASoft use
 
 ```
 export HEADAS=/Users/your_username/your_path/heasoft-6.31.1/aarch64-apple-darwin21.6.0
 source $HEADAS/headas-init.sh
 ```
 
-## Docker
+## Docker installation
 
 A pre-built Docker image is available from DockerHub [dustpancake/heasoft](https://hub.docker.com/r/dustpancake/heasoft). To obtain it, simply
 ```bash
@@ -105,6 +120,48 @@ docker run \
     dustpancake/heasoft:6.30.1 tcsh
 ```
 
+## Calibration and CALDB
+
+In order to run some of the mission-specific HEASoft tasks you will require calibration files for those missions (e.g., for *NuSTAR* or *NICER*) as well as some mission non-specific general calibration information.
+
+Instructions and more information on the [The HEASARC Calibration Database](https://heasarc.gsfc.nasa.gov/docs/heasarc/caldb/caldb_intro.html) web page.
+
+For specific missions see the [Latest CALDB Files for Supported Missions](https://heasarc.gsfc.nasa.gov/docs/heasarc/caldb/caldb_supported_missions.html) web page.
+
+### General calibration
+
+Follow the [How to Install a Calibration Database](https://heasarc.gsfc.nasa.gov/docs/heasarc/caldb/install.html) instructions.
+
+Update `/Users/your_path/...` to the appropriate path. The following was up-to-date as of 2023-01-20.
+
+```
+export CALDB=/Users/your_path/caldb
+cd $CALDB
+wget https://heasarc.gsfc.nasa.gov/FTP/caldb/software/tools/caldb_setup_files.tar.Z
+tar -zxvf caldb_setup_files.tar.Z
+wget https://heasarc.gsfc.nasa.gov/FTP/caldb/data/gen/goodfiles_gen_20200625.tar.Z
+tar -zxvf goodfiles_gen_20200625.tar.Z
+```
+
+Edit the path in ``caldbinit.sh`` then to set up CALDB use the following
+
+```
+export CALDB=/Users/your_path/caldb
+source $CALDB/software/tools/caldbinit.sh
+```
+
+### NuSTAR calibration
+
+Up-to-date as of 2023-01-20. See [Latest CALDB Files for Supported Missions](https://heasarc.gsfc.nasa.gov/docs/heasarc/caldb/caldb_supported_missions.html). Note that at the moment a patch file is required for NuSTAR.
+
+```
+cd $CALDB
+wget https://heasarc.gsfc.nasa.gov/FTP/caldb/data/nustar/fpm/goodfiles_nustar_fpm_20221229.tar.gz
+tar -zxvf goodfiles_nustar_fpm_20221229.tar.gz
+wget https://heasarc.gsfc.nasa.gov/FTP/caldb/data/nustar/fpm/goodfiles_nustar_fpm_clockcor_20221229.tar.gz
+tar -zxvf goodfiles_nustar_fpm_clockcor_20221229.tar.gz
+```
+
 ## Running XSPEC on the group servers
 
 HEASoft 6.29 is installed on the astrophysics group server.
@@ -124,3 +181,7 @@ To build additional models, enable the version 9 developer toolset in your shell
 ```bash
 scl enable devtoolset-9 bash
 ```
+
+## Learning to use XSPEC
+
+See the [XSPEC instruction manual](https://heasarc.gsfc.nasa.gov/docs/software/heasoft/xanadu/xspec/manual/XspecManual.html) which includes a [walk through tutorial](https://heasarc.gsfc.nasa.gov/docs/software/heasoft/xanadu/xspec/manual/node35.html).

@@ -25,7 +25,8 @@ This repository contains some (hopefully useful) guides, and general etiquette f
 ### Guides <a id="toc-tag-mdtoc" name="guides"></a>
 
 - [VSCode secure remote development with the Bristol servers](./guides/vs-code-ssh.md)
-- [Setting up XSPEC](./guides/xspec-setup.md)
+- [Setting up HEASoft (which includes XSPEC)](./guides/xspec-setup.md)
+- [Setting up SAS](./guides/sas-setup.md)
 - [Docker & Singularity](./guides/docker-singularity.md)
 - [Running docker containers on the Bristol servers](./guides/docker-singularity.md#running-docker-containers-on-the-astrophysics-servers)
 
