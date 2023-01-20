@@ -6,7 +6,8 @@ Setting up the XMM SAS data analysis software
 ## Table of Contents
 1. [Native installation](#native-installation)
     1. [M1 Mac installation](#m1-mac)
-2. [Calibration files](#calibration-files)
+2. [Docker](#docker)
+3. [Calibration files](#calibration-files)
 
 <!--END TOC-->
 
@@ -27,6 +28,10 @@ source /Users/my_user/Software/xmm-sas/xmmsas_20211130_0941/setsas.sh
 ```
 
 Note that I had to edit the `setsas.sh` file to change the line near the end to `ulimit -s 65520`. The larger value for the stack size that is in the file by default didn't work because it was above the hard limit. I don't really understand this but the workaround seems to work (anyone know more about this than me!?)
+
+## Docker
+
+You can also run SAS using Docker, although at present (as of 2023-01-20) this is x86 only (but it does run OK on Mac with Apple Silicon). See the [Docker for SAS](https://www.cosmos.esa.int/web/xmm-newton/sas-installation-docker4sas) page for instructions.
 
 ## Calibration files
 
