@@ -127,7 +127,7 @@ VSCode also has the ability to access the astro servers with an `ssh` command in
 ```bash
 ssh -N -L localhost:12001:TYPHON:22 -J USER:AQUILA USER:TYPHON
 ```
-The addition of `-J` make `AQUILA` a proxy and `TYPHON` the final destination. VSCode will make a change to your '.ssh' file, saving the command. You will find the host in the same way as above, you will also be prompted for your passwords to both the proxy and desired server.
+The addition of `-J` makes `AQUILA` a proxy and `TYPHON` the final destination. VSCode will make a change to your '.ssh' file, saving the command. You will find the host in the same way as above, you will also be prompted for your passwords to both the proxy and desired server when you try to connect.
 
 
 ## Using the extension <a id="toc-tag-mdtoc" name="using-the-extension"></a>
