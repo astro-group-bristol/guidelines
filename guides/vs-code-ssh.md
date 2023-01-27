@@ -120,6 +120,16 @@ Once connected, in the bottom left corner the connection should be displayed:
 <img width="400" src="../assets/remote-connection.png"/>
 </p>
 
+## Connecting through VSCode
+
+VSCode also has the ability to access the astro servers with an `ssh` command in VSCode. With the previous "Connect to Host..." option above, select "+ Add New SSH Host...". This will show a prompt to enter a command. You will need to enter something like the following:
+
+```bash
+ssh -N -L localhost:12001:TYPHON:22 -J USER:AQUILA USER:TYPHON
+```
+The addition of `-J` make `AQUILA` a proxy and `TYPHON` the final destination. VSCode will make a change to your '.ssh' file, saving the command. You will find the host in the same way as above, you will also be prompted for your passwords to both the proxy and desired server.
+
+
 ## Using the extension <a id="toc-tag-mdtoc" name="using-the-extension"></a>
 
 Now that we are set up, there are numerous things we can do.
