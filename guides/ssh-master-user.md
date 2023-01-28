@@ -70,6 +70,8 @@ $ ssh-copy-id USER@AQUILA
 ```
 Note: you only need to send the public key to AQUILA for it to work on all the servers as they share the same file system.
 
+You should test that this worked by remoting into the server, you should get a passphrase prompt (or no prompt if you didnt set a passphrase).
+
 ## Adding SSH key to .ssh/config
 
 To add this key to your config file add the additional line, ```IdentityFile``` and the location of the private key, for the appropriate Host.
@@ -79,3 +81,4 @@ Host AQUILA
    User USERNAME
    IdentityFile ~/.ssh/id_rsa
 ```
+This ```IdentityFile``` ssh option and private key path can also be added to the ```ssh``` Host created by VScode in [Using VSCode's remote SSH features](../guides/vs-code-ssh.md) guide. 
