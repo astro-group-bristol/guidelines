@@ -29,7 +29,7 @@ Instead we can save our ssh connection details in the ssh configuration file. To
         HostName AQUILA_ADDRESS
         User USERNAME
    ```
-   Make sure you replace ```AQUILA_URL```,```TYPHON_ADDRESS``` and ```USERNAME``` with their addresses and your username and save the file. With ```vim``` this can be done with ```:wq``` in command mode (to enter command mode press ESC key). Then try it out! Simply type ```ssh aquila``` or ```ssh typhon``` into the commandline, insert your password(s) and your in! 
+   Make sure you replace ```AQUILA_ADDRESS```,```TYPHON_ADDRESS``` and ```USERNAME``` with their addresses and your username and save the file. With ```vim``` this can be done with ```:wq``` in command mode (to enter command mode press ESC key). Then try it out! Simply type ```ssh aquila``` or ```ssh typhon``` into the commandline, insert your password(s) and your in! 
 
 ## Using SSH Keys
 
