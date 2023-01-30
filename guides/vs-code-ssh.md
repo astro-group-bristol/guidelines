@@ -3,14 +3,16 @@
 Microsoft's VSCode is gaining remote editor support, particularly [remote development over ssh](https://code.visualstudio.com/docs/remote/ssh-tutorial), which can be used with the astrophysics servers at Bristol.
 
 <!--BEGIN TOC-->
+
 ## Table of Contents
+
 1. [Setting up the VSCode SSH extension](#setting-up-the-vscode-ssh-extension)
 2. [SSH tunnelling](#ssh-tunnelling)
 3. [Connecting to the tunnel in VSCode](#connecting-to-the-tunnel-in-vscode)
 4. [Using the extension](#using-the-extension)
-    1. [Navigating and editing files](#navigating-and-editing-files)
-    2. [Opening terminals](#opening-terminals)
-    3. [Executing code remotely](#executing-code-remotely)
+   1. [Navigating and editing files](#navigating-and-editing-files)
+   2. [Opening terminals](#opening-terminals)
+   3. [Executing code remotely](#executing-code-remotely)
 5. [Disconnecting](#disconnecting)
 
 <!--END TOC-->
@@ -37,7 +39,7 @@ This guide briefly details how to get this set-up. For illustrative purposes, we
                         └┘
 ```
 
-*Domain names have been omitted in this public repository.*
+_Domain names have been omitted in this public repository._
 
 ## Setting up the VSCode SSH extension <a id="toc-tag-mdtoc" name="setting-up-the-vscode-ssh-extension"></a>
 
@@ -61,7 +63,6 @@ Once installed, you will have a new status icon in the bottom left corner of VSC
 
 Clicking on this will bring up the SSH remote connection dialog. From here, we can enter the address of a remote machine, and VSCode will open a new window with a remote session.
 
-
 ## SSH tunnelling <a id="toc-tag-mdtoc" name="ssh-tunnelling"></a>
 
 Because we can't access Typhon directly, we have to take an additional step to login when not using the UoB WiFi:
@@ -71,9 +72,10 @@ Because we can't access Typhon directly, we have to take an additional step to l
 
 This section will focus on creating an SSH bridge through Aquila.
 
-The `ssh` program supports *tunneling*, which allows a machine to forward ports via SSH to another machine. This can be used to make e.g. secure web-connection, or just to forward SSH traffic.
+The `ssh` program supports _tunneling_, which allows a machine to forward ports via SSH to another machine. This can be used to make e.g. secure web-connection, or just to forward SSH traffic.
 
-From the `ssh` manual, the `-L` flag allows us to forward, or *tunnel*, traffic from one machine through to another.
+From the `ssh` manual, the `-L` flag allows us to forward, or _tunnel_, traffic from one machine through to another.
+
 > ```
 > -L [bind_address:]port:host:hostport
 > -L [bind_address:]port:remote_socket
@@ -90,11 +92,12 @@ ssh -N -L localhost:12001:TYPHON:22 USER@AQUILA
 Replace `TYPHON`, `AQUILA`, and `USER` with the correct domain names and your Bristol username ("ab12345").
 
 Quickly dissecting this command:
+
 - `-N`: Do not execute a remote command on Aquila.
 - `-L localhost:12001:TYPHON:22` bind port `12001` on our local machine (PC), such that when a connection is made to this port, it will be forwarded, via Aquila, to Typhon at port 22 (the default SSH port).
-- `USER@AQUILA` the bridge, or *tunnel*, host where we want to pass our traffic through.
+- `USER@AQUILA` the bridge, or _tunnel_, host where we want to pass our traffic through.
 
-Note, this will login to Typhon with the *same username* as `USER`. The command will also not display anything when run, and will appear to 'hang', but this is intended!
+Note, this will login to Typhon with the _same username_ as `USER`. The command will also not display anything when run, and will appear to 'hang', but this is intended!
 
 ## Connecting to the tunnel in VSCode <a id="toc-tag-mdtoc" name="connecting-to-the-tunnel-in-vscode"></a>
 
@@ -127,8 +130,8 @@ VSCode also has the ability to access the astro servers with an `ssh` command in
 ```bash
 ssh -N -L localhost:12001:TYPHON:22 -J USER:AQUILA USER:TYPHON
 ```
-The addition of `-J` makes `AQUILA` a proxy and `TYPHON` the final destination. VSCode will make a change to your '.ssh' file, saving the command. You will find the host in the same way as above, you will also be prompted for your passwords to both the proxy and desired server when you try to connect.
 
+The addition of `-J` makes `AQUILA` a proxy and `TYPHON` the final destination. VSCode will make a change to your '.ssh' file, saving the command. You will find the host in the same way as above, you will also be prompted for your passwords to both the proxy and desired server when you try to connect.
 
 ## Using the extension <a id="toc-tag-mdtoc" name="using-the-extension"></a>
 
@@ -166,7 +169,7 @@ This shell will be running on Typhon directly. To add more terminals, or change 
 
 ### Executing code remotely <a id="toc-tag-mdtoc" name="executing-code-remotely"></a>
 
-Any command executed in the terminals opened above will now automatically be executed on the remote server. 
+Any command executed in the terminals opened above will now automatically be executed on the remote server.
 
 Any extensions installed in the remote session will also automatically be installed on Typhon, allowing you to run language extensions (such as Python or Julia) directly on the remote machine.
 

@@ -1,13 +1,15 @@
 # Docker & Singularity
 
-*This guide is heavily work-in-progress, as reproducible environment and development containers is a very broad topic. Please open an issue if something is unclear.*
+_This guide is heavily work-in-progress, as reproducible environment and development containers is a very broad topic. Please open an issue if something is unclear._
 
 <!--BEGIN TOC-->
+
 ## Table of Contents
+
 1. [Singularity](#singularity)
-    1. [Quickstart](#quickstart)
-    2. [Running docker containers on the astrophysics servers](#running-docker-containers-on-the-astrophysics-servers)
-    3. [X11 support](#x11-support)
+   1. [Quickstart](#quickstart)
+   2. [Running docker containers on the astrophysics servers](#running-docker-containers-on-the-astrophysics-servers)
+   3. [X11 support](#x11-support)
 
 <!--END TOC-->
 
@@ -24,19 +26,19 @@ Singularity is a container runtime environment for linux, and is available on th
 
 ### Running docker containers on the astrophysics servers <a id="toc-tag-mdtoc" name="running-docker-containers-on-the-astrophysics-servers"></a>
 
-With singularity, we can convert docker containers to the *Singularity Image Format* (SIF) and execute these directly on the astrophysics servers.
+With singularity, we can convert docker containers to the _Singularity Image Format_ (SIF) and execute these directly on the astrophysics servers.
 
 Singularity can already pull container images from a variety of registries, including dockerhub. From the `pull` help page:
 
 > ```
 > Supported URIs include:
-> 
+>
 >  library: Pull an image from the currently configured library
 >     library://user/collection/container[:tag]
 >
 >  docker: Pull a Docker/OCI image from Docker Hub, or another OCI registry.
 >     docker://user/image:tag
->   
+>
 >  shub: Pull an image from Singularity Hub
 >     shub://user/image:tag
 >
@@ -49,7 +51,7 @@ Singularity can already pull container images from a variety of registries, incl
 
 If the container you wish to run is hosted in one of the above registries, then you can directly pull and convert the container to SIF, e.g.
 
-```bash 
+```bash
 singularity pull my_image.sif docker://username/myimage:latest
 ```
 
@@ -64,15 +66,19 @@ Upload the file to the astrophysics servers, and re-build the container as a SIF
 ```bash
 singularity build --sandbox my_image.sif docker-archive:///absolute/path/to/file
 ```
+
 - the `--sandbox` flag ensures that root privileges are disabled, and keeps the entire image archive in a single directory structure
 
 Relative file-paths to the archive can be passed with `./`.
+
 - Example: XMM SAS
+
 ```bash
-singularity build --sandbox sas_20.sif docker-archive://./sas_20_0_docker.tar 
+singularity build --sandbox sas_20.sif docker-archive://./sas_20_0_docker.tar
 ```
 
 The docker container's context can now be shelled into
+
 ```bash
 singularity shell sas_20.sif
 ```
