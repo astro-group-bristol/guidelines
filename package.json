@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "format": "prettier --write guides/ README.md"
+  },
+  "devDependencies": {
+    "prettier": "2.8.3"
+  }
+}
