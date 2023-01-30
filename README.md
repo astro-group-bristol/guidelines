@@ -7,9 +7,11 @@
 This repository contains some general information and coding practices within the organization.
 
 <!--BEGIN TOC-->
+
 ## Table of Contents
+
 1. [In this repository](#in-this-repository)
-    1. [Guides](#guides)
+   1. [Guides](#guides)
 2. [Creating new repositories](#creating-new-repositories)
 3. [GitHub Workflows](#github-workflows)
 4. [Questions and Queries](#questions-and-queries)
@@ -32,9 +34,9 @@ This repository contains some (hopefully useful) guides, and general etiquette f
 
 ## Creating new repositories <a id="toc-tag-mdtoc" name="creating-new-repositories"></a>
 
-All members have default read permissions for repositories, however this still allows you to create new repositories under the organization. Repositories you create are controlled by *you*, and are managed similarly to how you would manage your own personal repositories.
+All members have default read permissions for repositories, however this still allows you to create new repositories under the organization. Repositories you create are controlled by _you_, and are managed similarly to how you would manage your own personal repositories.
 
-Collaborators need to be invited, even if they are members of the Astro Group Bristol. 
+Collaborators need to be invited, even if they are members of the Astro Group Bristol.
 
 Creating repositories for your own code is perfectly acceptable always. If you wish to create a public repository for the group, e.g. `short-data-analysis-scripts` for dumping commonly used code snippets, please discuss with the other members beforehand to gauge the interest and use.
 
@@ -44,7 +46,7 @@ You can create a new `astro-group-bristol` repository by navigating to the organ
 
 ## GitHub Workflows <a id="toc-tag-mdtoc" name="github-workflows"></a>
 
-We have 3000 free minutes of GitHub Workflows per month. Please configure workflows to use minimal time if possible. This can be done by 
+We have 3000 free minutes of GitHub Workflows per month. Please configure workflows to use minimal time if possible. This can be done by
 
 - only triggering a work flow on specific branches:
 
@@ -74,7 +76,7 @@ on:
   push:
     paths:
       # only run if python files in `src` have been modified
-      - 'src/**.py'
+      - "src/**.py"
 ```
 
 ## Questions and Queries <a id="toc-tag-mdtoc" name="questions-and-queries"></a>

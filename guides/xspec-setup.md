@@ -1,16 +1,18 @@
 # HEASoft (which includes XSPEC) setup
 
 <!--BEGIN TOC-->
+
 ## Table of Contents
+
 1. [Native installation](#native-installation)
 2. [Docker installation](#docker-installation)
-    1. [Starting a container](#starting-a-container)
-    2. [Running with X11](#running-with-x11)
-        1. [OSX](#osx)
-        2. [Ubuntu / Debian](#ubuntu--debian)
+   1. [Starting a container](#starting-a-container)
+   2. [Running with X11](#running-with-x11)
+      1. [OSX](#osx)
+      2. [Ubuntu / Debian](#ubuntu--debian)
 3. [Calibration and CALDB](#calibration-and-caldb)
-    1. [General calibration](#general-calibration)
-    2. [NuSTAR calibration](#nustar-calibration)
+   1. [General calibration](#general-calibration)
+   2. [NuSTAR calibration](#nustar-calibration)
 4. [Running XSPEC on the group servers](#running-xspec-on-the-group-servers)
 5. [Learning to use XSPEC](#learning-to-use-xspec)
 <!--END TOC-->
@@ -26,7 +28,7 @@ Here are notes about how I (AJY) installed HEASoft on my M1 Mac laptop (2023-01)
 - Install `gcc@12` with homebrew (`brew install gcc@12`)
 - Install Anaconda using the standard web installer, making sure the M1 Silicon version is used (because I unfortuantely couldn't get astropy to work with the Homebrew python)
 - Install `astropy` with `conda install astropy`
--  Set up the paths to compilers, etc. as suggested in the [instructions](https://heasarc.gsfc.nasa.gov/lheasoft/macos.html) (replacing `your_username` with your user name). I installed HEASoft in the folder where I unpacked heasoft (`your_path/heasoft-6.31.1` in the script below)
+- Set up the paths to compilers, etc. as suggested in the [instructions](https://heasarc.gsfc.nasa.gov/lheasoft/macos.html) (replacing `your_username` with your user name). I installed HEASoft in the folder where I unpacked heasoft (`your_path/heasoft-6.31.1` in the script below)
 
 ```
 export CC=/usr/bin/clang
@@ -50,6 +52,7 @@ source $HEADAS/headas-init.sh
 ## Docker installation
 
 A pre-built Docker image is available from DockerHub [dustpancake/heasoft](https://hub.docker.com/r/dustpancake/heasoft). To obtain it, simply
+
 ```bash
 docker pull dustpancake/heasoft
 ```
@@ -63,6 +66,7 @@ Optionally, a version can be specified with `dustpancake/heasoft:version`. At th
 ### Starting a container
 
 To start HEASoft with persistent storage, navigate to your data directory and run:
+
 ```
 docker run \
     --name heasoft \
@@ -78,19 +82,22 @@ Note that only data stored in the container's `/data` directory will be saved on
 
 Running with [X11](https://x.org/wiki/) graphical support allows HEASoft to display windows on your screen, useful for any type of graphical manipulation or interactive plotting. Setting this up is very OS specific.
 
-*If your Linux distributions or operating system is not listed, please open an issue and we'll add instructions.*
+_If your Linux distributions or operating system is not listed, please open an issue and we'll add instructions._
 
 #### OSX
+
 For OSX, it is recommended you install [XQuartz through Homebrew](https://formulae.brew.sh/cask/xquartz), which will install the full `libx11` and X11 server utilities.
 
 Next, start XQuartz from the application menu.
 
 We may then permit localhost connections to the X window manager by adding `127.0.0.1` as a known host:
+
 ```bash
 /opt/X11/bin/xhost + 127.0.0.1
 ```
 
 We can then spin up a container, adding a `DISPLAY` environment variable:
+
 ```
 docker run \
     --name heasoft \
@@ -102,13 +109,17 @@ docker run \
 ```
 
 #### Ubuntu / Debian
+
 Debian (and therefore Ubuntu) is transitioning from X11 to Wayland. If this is the case for the version you are running, you may still have to install X11
+
 ```bash
 sudo apt-get install xorg x11-xserver-utils
 ```
+
 A reboot may then be required.
 
 If you already have X11 installed, you can mount the authorities file in the container and pass the `DISPLAY` environment variable:
+
 ```
 docker run \
     --name heasoft \
@@ -122,7 +133,7 @@ docker run \
 
 ## Calibration and CALDB
 
-In order to run some of the mission-specific HEASoft tasks you will require calibration files for those missions (e.g., for *NuSTAR* or *NICER*) as well as some mission non-specific general calibration information.
+In order to run some of the mission-specific HEASoft tasks you will require calibration files for those missions (e.g., for _NuSTAR_ or _NICER_) as well as some mission non-specific general calibration information.
 
 Instructions and more information on the [The HEASARC Calibration Database](https://heasarc.gsfc.nasa.gov/docs/heasarc/caldb/caldb_intro.html) web page.
 
@@ -143,7 +154,7 @@ wget https://heasarc.gsfc.nasa.gov/FTP/caldb/data/gen/goodfiles_gen_20200625.tar
 tar -zxvf goodfiles_gen_20200625.tar.Z
 ```
 
-Edit the path in ``caldbinit.sh`` then to set up CALDB use the following
+Edit the path in `caldbinit.sh` then to set up CALDB use the following
 
 ```
 export CALDB=/Users/your_path/caldb
@@ -167,17 +178,20 @@ tar -zxvf goodfiles_nustar_fpm_clockcor_20221229.tar.gz
 HEASoft 6.29 is installed on the astrophysics group server.
 
 Either run the following or add it to your `.bashrc` file:
+
 ```
 export HEADAS=/usr/local/heasoft-6.29/x86_64-pc-linux-gnu-libc2.17
 alias heainit="source $HEADAS/headas-init.sh"
 ```
 
 The HEASoft software may then be access with
+
 ```
 heainit
 ```
 
 To build additional models, enable the version 9 developer toolset in your shell:
+
 ```bash
 scl enable devtoolset-9 bash
 ```
