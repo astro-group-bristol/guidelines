@@ -50,7 +50,7 @@ Fri Sep 29 11:09:25 2023
 | N/A   44C    P0    27W /  70W |  14630MiB / 15109MiB |      0%      Default |
 |                               |                      |                  N/A |
 +-------------------------------+----------------------+----------------------+
- 
+
 +-----------------------------------------------------------------------------+
 | Processes:                                                                  |
 |  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
@@ -60,7 +60,8 @@ Fri Sep 29 11:09:25 2023
 +-----------------------------------------------------------------------------+
 ```
 
-The CUDA compiler is available at 
+The CUDA compiler is available at
+
 ```
 /usr/local/cuda/bin/nvcc
 ```
@@ -72,4 +73,3 @@ Julia does it best.
 C++20 and onwards (@RhysM, do we have compatible compilers?) can leverage the execution policy system to trivially offload STL algorithms onto GPU devices.
 
 For more info, ask Rhys Morris.
-
