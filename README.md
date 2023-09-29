@@ -25,12 +25,8 @@ This repository contains some general information and coding practices within th
 This repository contains some (hopefully useful) guides, and general etiquette for our organization.
 
 ### Guides <a id="toc-tag-mdtoc" name="guides"></a>
-- [Become an SSH master](./guides/ssh-master-user.md)
-- [VSCode secure remote development with the Bristol servers](./guides/vs-code-ssh.md)
-- [Setting up HEASoft (which includes XSPEC)](./guides/xspec-setup.md)
-- [Setting up SAS](./guides/sas-setup.md)
-- [Docker & Singularity](./guides/docker-singularity.md)
-- [Running docker containers on the Bristol servers](./guides/docker-singularity.md#running-docker-containers-on-the-astrophysics-servers)
+
+- See [Guides](./guides)
 
 ## Creating new repositories <a id="toc-tag-mdtoc" name="creating-new-repositories"></a>
 

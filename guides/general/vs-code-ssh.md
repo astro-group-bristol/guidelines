@@ -9,11 +9,12 @@ Microsoft's VSCode is gaining remote editor support, particularly [remote develo
 1. [Setting up the VSCode SSH extension](#setting-up-the-vscode-ssh-extension)
 2. [SSH tunnelling](#ssh-tunnelling)
 3. [Connecting to the tunnel in VSCode](#connecting-to-the-tunnel-in-vscode)
-4. [Using the extension](#using-the-extension)
+4. [Connecting through VSCode](#connecting-through-vscode)
+5. [Using the extension](#using-the-extension)
    1. [Navigating and editing files](#navigating-and-editing-files)
    2. [Opening terminals](#opening-terminals)
    3. [Executing code remotely](#executing-code-remotely)
-5. [Disconnecting](#disconnecting)
+6. [Disconnecting](#disconnecting)
 
 <!--END TOC-->
 
@@ -46,19 +47,19 @@ _Domain names have been omitted in this public repository._
 Start VSCode, and click on the "Extensions" tab on the left:
 
 <p align="center">
-<img height="200" src="../assets/vs-code-extensions.png"/>
+<img height="200" src="./assets/vs-code-extensions.png"/>
 </p>
 
 Search for "SSH" and install the "Remote - SSH" extension:
 
 <p align="center">
-<img width="900" src="../assets/remote-ssh-extension.png"/>
+<img width="900" src="./assets/remote-ssh-extension.png"/>
 </p>
 
 Once installed, you will have a new status icon in the bottom left corner of VSCode
 
 <p align="center">
-<img width="200" src="../assets/remote-status-bar.png"/>
+<img width="200" src="./assets/remote-status-bar.png"/>
 </p>
 
 Clicking on this will bring up the SSH remote connection dialog. From here, we can enter the address of a remote machine, and VSCode will open a new window with a remote session.
@@ -106,13 +107,13 @@ With the tunnel running in a terminal, we now return to VSCode and can open a re
 To do this, we click on the green remote session button in the bottom left corner:
 
 <p align="center">
-<img width="600" src="../assets/remote-connect.png"/>
+<img width="600" src="./assets/remote-connect.png"/>
 </p>
 
 Select "Connect to Host", and enter point the SSH session to our local port:
 
 <p align="center">
-<img width="600" src="../assets/remote-localhost.png"/>
+<img width="600" src="./assets/remote-localhost.png"/>
 </p>
 
 Hit enter to bring up the new remote session. You may be prompted about trusting `localhost` keys the first time you connect -- this is perfectly fine, and just click "yes".
@@ -120,10 +121,10 @@ Hit enter to bring up the new remote session. You may be prompted about trusting
 Once connected, in the bottom left corner the connection should be displayed:
 
 <p align="center">
-<img width="400" src="../assets/remote-connection.png"/>
+<img width="400" src="./assets/remote-connection.png"/>
 </p>
 
-## Connecting through VSCode
+## Connecting through VSCode <a id="toc-tag-mdtoc" name="connecting-through-vscode"></a>
 
 VSCode also has the ability to access the astro servers with an `ssh` command in VSCode. With the previous "Connect to Host..." option above, select "+ Add New SSH Host...". This will show a prompt to enter a command. You will need to enter something like the following:
 
@@ -142,13 +143,13 @@ Now that we are set up, there are numerous things we can do.
 To open the file explorer, we click on the file icon in the left navigation bar at the top:
 
 <p align="center">
-<img width="600" src="../assets/remote-file.png"/>
+<img width="600" src="./assets/remote-file.png"/>
 </p>
 
 Click "Open Folder" and either use the navigation dialog, or enter the path to a folder you want to open. The entire folder is then used as the VSCode workspace, allowing you to have multiple files open at once:
 
 <p align="center">
-<img src="../assets/remote-workspace.png"/>
+<img src="./assets/remote-workspace.png"/>
 </p>
 
 VSCode's extensions support displaying many different file types, including images, videos, spreadsheets, databases, rendered markdown, HTML, and more, all in your remote SSH session.
@@ -158,13 +159,13 @@ VSCode's extensions support displaying many different file types, including imag
 We can open a new terminal from the "Terminal" menu at the top of our screen:
 
 <p align="center">
-<img width="300" src="../assets/remote-terminal-1.png"/>
+<img width="300" src="./assets/remote-terminal-1.png"/>
 </p>
 
 This shell will be running on Typhon directly. To add more terminals, or change the terminal type, click the little "+" icon:
 
 <p align="center">
-<img width="300" src="../assets/remote-terminal-2.png"/>
+<img width="300" src="./assets/remote-terminal-2.png"/>
 </p>
 
 ### Executing code remotely <a id="toc-tag-mdtoc" name="executing-code-remotely"></a>

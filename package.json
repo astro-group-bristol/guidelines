@@ -1,9 +1,13 @@
 {
   "scripts": {
     "format": "prettier --write guides/ README.md",
+    "toc": "./node_modules/mdtoc/mdtoc guides/ README.md",
     "check-format": "prettier --check guides/ README.md"
   },
   "devDependencies": {
     "prettier": "2.8.3"
+  },
+  "dependencies": {
+    "mdtoc": "github:fjebaker/mdtoc"
   }
 }
