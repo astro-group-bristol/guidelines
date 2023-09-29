@@ -24,14 +24,13 @@ Learn how to contribute to our guides and other git projects:
 
 ## Contributors
 
-Much of the documentation has been ported form an effort organized by Sotiria Fotopoulou, with thanks to everyone who contributed (alphabetically):
+Much of the documentation has been ported form an effort organized by Sotiria Fotopoulou (@SFotopoulou), with thanks to everyone who contributed (alphabetically):
 
-- Grant Stevens
-- Hattie Steward
+- Grant Stevens (@grant-m-s)
+- Hattie Steward (@hstewart93)
 - Lucy Taylor
-- Matt Selwood
-- Rhys Shaw
-- Sotiria Fotopoulou
+- Matt Selwood (@MattSelwood)
+- Rhys Shaw (@RhysAlfShaw)
 - Teresa Matamoro
 
-Those notes have been translated from OneNote to this repository by Fergus.
+Those notes have been translated from OneNote to this repository by Fergus (@fjebaker).
