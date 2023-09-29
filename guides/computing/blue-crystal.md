@@ -1,15 +1,17 @@
 # BlueCrystal and BluePebble
 
 <!--BEGIN TOC-->
+
 ## Table of Contents
+
 1. [BlueCrystal Phase 4](#bluecrystal-phase-4)
-    1. [Usage](#usage)
+   1. [Usage](#usage)
 2. [Useful links](#useful-links)
 3. [Blue Pebble](#blue-pebble)
-    1. [Getting access](#getting-access)
-    2. [Usage](#usage)
-    3. [Storage](#storage)
-        1. [Transferring files to Phaethon example](#transferring-files-to-phaethon-example)
+   1. [Getting access](#getting-access)
+   2. [Usage](#usage)
+   3. [Storage](#storage)
+      1. [Transferring files to Phaethon example](#transferring-files-to-phaethon-example)
 
 <!--END TOC-->
 

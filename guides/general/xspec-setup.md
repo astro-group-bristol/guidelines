@@ -1,17 +1,19 @@
 # HEASoft (which includes XSPEC) setup
 
 <!--BEGIN TOC-->
+
 ## Table of Contents
+
 1. [Native installation](#native-installation)
-    1. [Native installation on M1 Mac](#native-installation-on-m1-mac)
+   1. [Native installation on M1 Mac](#native-installation-on-m1-mac)
 2. [Docker installation](#docker-installation)
-    1. [Starting a container](#starting-a-container)
-    2. [Running with X11](#running-with-x11)
-        1. [OSX](#osx)
-        2. [Ubuntu / Debian](#ubuntu-/-debian)
+   1. [Starting a container](#starting-a-container)
+   2. [Running with X11](#running-with-x11)
+      1. [OSX](#osx)
+      2. [Ubuntu / Debian](#ubuntu-/-debian)
 3. [Calibration and CALDB](#calibration-and-caldb)
-    1. [General calibration](#general-calibration)
-    2. [NuSTAR calibration](#nustar-calibration)
+   1. [General calibration](#general-calibration)
+   2. [NuSTAR calibration](#nustar-calibration)
 4. [Running XSPEC on the group servers](#running-xspec-on-the-group-servers)
 5. [Learning to use XSPEC](#learning-to-use-xspec)
 

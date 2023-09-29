@@ -1,11 +1,13 @@
 # Astro group servers
 
 <!--BEGIN TOC-->
+
 ## Table of Contents
+
 1. [Getting access (for members of the department only)](#getting-access-for-members-of-the-department-only)
 2. [Be NICE](#be-nice)
 3. [Typhon](#typhon)
-    1. [GPU](#gpu)
+   1. [GPU](#gpu)
 
 <!--END TOC-->
 

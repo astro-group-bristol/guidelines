@@ -3,15 +3,17 @@
 Microsoft's VSCode is gaining remote editor support, particularly [remote development over ssh](https://code.visualstudio.com/docs/remote/ssh-tutorial), which can be used with the astrophysics servers at Bristol.
 
 <!--BEGIN TOC-->
+
 ## Table of Contents
+
 1. [Setting up the VSCode SSH extension](#setting-up-the-vscode-ssh-extension)
 2. [SSH tunnelling](#ssh-tunnelling)
 3. [Connecting to the tunnel in VSCode](#connecting-to-the-tunnel-in-vscode)
 4. [Connecting through VSCode](#connecting-through-vscode)
 5. [Using the extension](#using-the-extension)
-    1. [Navigating and editing files](#navigating-and-editing-files)
-    2. [Opening terminals](#opening-terminals)
-    3. [Executing code remotely](#executing-code-remotely)
+   1. [Navigating and editing files](#navigating-and-editing-files)
+   2. [Opening terminals](#opening-terminals)
+   3. [Executing code remotely](#executing-code-remotely)
 6. [Disconnecting](#disconnecting)
 
 <!--END TOC-->

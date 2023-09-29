@@ -1,7 +1,9 @@
 # How to be an SSH Master.
 
 <!--BEGIN TOC-->
+
 ## Table of Contents
+
 1. [Table of Contents](#table-of-contents)
 2. [.ssh/config - SSH config file](#-ssh/config---ssh-config-file)
 3. [Using SSH Keys](#using-ssh-keys)

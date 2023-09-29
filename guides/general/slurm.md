@@ -5,15 +5,17 @@
 # Slurm Scheduler
 
 <!--BEGIN TOC-->
+
 ## Table of Contents
+
 1. [Useful links](#useful-links)
 2. [Examples](#examples)
 3. [Quick reference](#quick-reference)
 4. [Submitting multiple jobs](#submitting-multiple-jobs)
 5. [Arrays jobs](#arrays-jobs)
 6. [Modules system](#modules-system)
-    1. [Overview](#overview)
-    2. [Using Modules in Slurm Jobs](#using-modules-in-slurm-jobs)
+   1. [Overview](#overview)
+   2. [Using Modules in Slurm Jobs](#using-modules-in-slurm-jobs)
 
 <!--END TOC-->
 

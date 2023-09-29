@@ -1,7 +1,9 @@
 # Guides
 
 <!--BEGIN TOC-->
+
 ## Table of Contents
+
 1. [General](#general)
 2. [Computers and servers](#computers-and-servers)
 3. [Contributors](#contributors)
@@ -20,6 +22,7 @@ Learn how to contribute to our guides and other git projects:
 - [Setting up SAS](./general/sas-setup.md)
 - [Docker & Singularity](./general/docker-singularity.md)
 - [Running docker containers on the Bristol servers](./general/docker-singularity.md#running-docker-containers-on-the-astrophysics-servers)
+- [Slurm](./general/slurm.md)
 
 ## Computers and servers <a id="toc-tag-mdtoc" name="computers-and-servers"></a>
 

@@ -1,7 +1,9 @@
 # Computing tricks
 
 <!--BEGIN TOC-->
+
 ## Table of Contents
+
 1. [Persistent jobs](#persistent-jobs)
 2. [Running jobs in parallel](#running-jobs-in-parallel)
 

@@ -1,7 +1,9 @@
 # Other clusters
 
 <!--BEGIN TOC-->
+
 ## Table of Contents
+
 1. [Department affiliations](#department-affiliations)
 
 <!--END TOC-->

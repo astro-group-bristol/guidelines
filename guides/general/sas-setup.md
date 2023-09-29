@@ -3,9 +3,11 @@
 Setting up the XMM SAS data analysis software
 
 <!--BEGIN TOC-->
+
 ## Table of Contents
+
 1. [Native installation](#native-installation)
-    1. [M1 Mac](#m1-mac)
+   1. [M1 Mac](#m1-mac)
 2. [Docker](#docker)
 3. [Calibration files](#calibration-files)
 
