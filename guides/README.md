@@ -17,3 +17,17 @@
 - [JADE](./computing/jade.md)
 - [IRIS](./computing/iris.md)
 - [Other Clusters](./computing/other-clusters.md)
+
+## Contributors
+
+Much of the documentation has been ported form an effort organized by Sotiria Fotopoulou, with thanks to everyone who contributed (alphabetically):
+
+- Grant Stevens
+- Hattie Steward
+- Lucy Taylor
+- Matt Selwood
+- Rhys Shaw
+- Sotiria Fotopoulou
+- Teresa Matamoro
+
+Those notes have been translated from OneNote to this repository by Fergus.
