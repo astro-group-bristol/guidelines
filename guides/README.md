@@ -2,12 +2,12 @@
 
 ## General
 
-- [Become an SSH master](ssh-master-user.md)
-- [VSCode secure remote development with the Bristol servers](vs-code-ssh.md)
-- [Setting up HEASoft (which includes XSPEC)](xspec-setup.md)
-- [Setting up SAS](sas-setup.md)
-- [Docker & Singularity](docker-singularity.md)
-- [Running docker containers on the Bristol servers](docker-singularity.md#running-docker-containers-on-the-astrophysics-servers)
+- [Become an SSH master](./general/ssh-master-user.md)
+- [VSCode secure remote development with the Bristol servers](./general/vs-code-ssh.md)
+- [Setting up HEASoft (./general/which includes XSPEC)](xspec-setup.md)
+- [Setting up SAS](./general/sas-setup.md)
+- [Docker & Singularity](./general/docker-singularity.md)
+- [Running docker containers on the Bristol servers](./general/docker-singularity.md#running-docker-containers-on-the-astrophysics-servers)
 
 ## Computers and servers
 
