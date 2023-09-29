@@ -14,4 +14,7 @@ See the [HPC UK Facilities list](https://www.hpc-uk.ac.uk/facilities/).
 
 Who to contact in our deparment to learn more about their expierences with using other facilities:
 
-- Fergus: DiRAC, CSD3
+- JADE: Grant Stevens
+- IRIS: Matt Selwood, Sotiria Fotopoulou
+- DiRAC: Fergus Baker
+- CSD3: Fergus Baker
