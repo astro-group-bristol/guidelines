@@ -70,7 +70,7 @@ This will prompt you for the following:
 
 Once this is done you should have received an output like this.
 <a align="center">
-<img src="../assets/ssh-keygen.png">
+<img src="./assets/ssh-keygen.png">
 </a>
 
 Your public key will then need to be added to the server to use the `ssh` key for

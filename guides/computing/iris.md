@@ -34,7 +34,7 @@ General access can be requested through the annual call.
 
 ## Usage
 
-- For more on Slurm see [here](../slurm.md)
+- For more on Slurm see [here](../general/slurm.md)
 
 Different to UoB resources (Blue Pebble / Blue Crystal) and undocumented is that we need to define the partition we want to access. Default seems to be 'ral' so if working in the 'cam' cluster we need to define:
 

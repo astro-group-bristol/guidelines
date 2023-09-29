@@ -10,7 +10,7 @@ Phase 4 has the following hardware:
 
 ### Usage
 
-BlueCrystal uses [Slurm](../slurm.md).
+BlueCrystal uses [Slurm](../general/slurm.md).
 
 BlueCrystal job scripts must contain a line that specifies which project you are working on (as part of the queueing system):
 
@@ -59,7 +59,7 @@ bp1-login.acrc.bris.ac.uk
 
 ### Usage
 
-Current scheduler is [Slurm](../slurm.md), basic example scripts can be found here.
+Current scheduler is [Slurm](../general/slurm.md), basic example scripts can be found here.
 
 For monitoring SLURM jobs see [here](https://help.jasmin.ac.uk/article/4892-how-to-monitor-slurm-jobs).
 

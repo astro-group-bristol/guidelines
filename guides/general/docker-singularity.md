@@ -98,5 +98,5 @@ singularity shell sas_20.sif
 Any graphical interfaces which now start will be shown directly on your machine:
 
 <p align="center">
-<img width="800" src="../assets/X11-XMM-SAS.png"/>
+<img width="800" src="./assets/X11-XMM-SAS.png"/>
 </p>
