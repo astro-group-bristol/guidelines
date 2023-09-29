@@ -1,27 +1,27 @@
 # HEASoft (which includes XSPEC) setup
 
 <!--BEGIN TOC-->
-
 ## Table of Contents
-
 1. [Native installation](#native-installation)
+    1. [Native installation on M1 Mac](#native-installation-on-m1-mac)
 2. [Docker installation](#docker-installation)
-   1. [Starting a container](#starting-a-container)
-   2. [Running with X11](#running-with-x11)
-      1. [OSX](#osx)
-      2. [Ubuntu / Debian](#ubuntu--debian)
+    1. [Starting a container](#starting-a-container)
+    2. [Running with X11](#running-with-x11)
+        1. [OSX](#osx)
+        2. [Ubuntu / Debian](#ubuntu-/-debian)
 3. [Calibration and CALDB](#calibration-and-caldb)
-   1. [General calibration](#general-calibration)
-   2. [NuSTAR calibration](#nustar-calibration)
+    1. [General calibration](#general-calibration)
+    2. [NuSTAR calibration](#nustar-calibration)
 4. [Running XSPEC on the group servers](#running-xspec-on-the-group-servers)
 5. [Learning to use XSPEC](#learning-to-use-xspec)
+
 <!--END TOC-->
 
-## Native installation
+## Native installation <a id="toc-tag-mdtoc" name="native-installation"></a>
 
 The source code and native installation instructions are available on the [HEASoft website](https://heasarc.gsfc.nasa.gov/lheasoft/download.html).
 
-### Native installation on M1 Mac
+### Native installation on M1 Mac <a id="toc-tag-mdtoc" name="native-installation-on-m1-mac"></a>
 
 Here are notes about how I (AJY) installed HEASoft on my M1 Mac laptop (2023-01):
 
@@ -49,7 +49,7 @@ export HEADAS=/Users/your_username/your_path/heasoft-6.31.1/aarch64-apple-darwin
 source $HEADAS/headas-init.sh
 ```
 
-## Docker installation
+## Docker installation <a id="toc-tag-mdtoc" name="docker-installation"></a>
 
 A pre-built Docker image is available from DockerHub [dustpancake/heasoft](https://hub.docker.com/r/dustpancake/heasoft). To obtain it, simply
 
@@ -63,7 +63,7 @@ Optionally, a version can be specified with `dustpancake/heasoft:version`. At th
 
 - v6.30.1 (release: 11 April 2022)
 
-### Starting a container
+### Starting a container <a id="toc-tag-mdtoc" name="starting-a-container"></a>
 
 To start HEASoft with persistent storage, navigate to your data directory and run:
 
@@ -78,13 +78,13 @@ docker run \
 
 Note that only data stored in the container's `/data` directory will be saved on your local machine's disk.
 
-### Running with X11
+### Running with X11 <a id="toc-tag-mdtoc" name="running-with-x11"></a>
 
 Running with [X11](https://x.org/wiki/) graphical support allows HEASoft to display windows on your screen, useful for any type of graphical manipulation or interactive plotting. Setting this up is very OS specific.
 
 _If your Linux distributions or operating system is not listed, please open an issue and we'll add instructions._
 
-#### OSX
+#### OSX <a id="toc-tag-mdtoc" name="osx"></a>
 
 For OSX, it is recommended you install [XQuartz through Homebrew](https://formulae.brew.sh/cask/xquartz), which will install the full `libx11` and X11 server utilities.
 
@@ -108,7 +108,7 @@ docker run \
     dustpancake/heasoft:6.30.1 tcsh
 ```
 
-#### Ubuntu / Debian
+#### Ubuntu / Debian <a id="toc-tag-mdtoc" name="ubuntu-/-debian"></a>
 
 Debian (and therefore Ubuntu) is transitioning from X11 to Wayland. If this is the case for the version you are running, you may still have to install X11
 
@@ -131,7 +131,7 @@ docker run \
     dustpancake/heasoft:6.30.1 tcsh
 ```
 
-## Calibration and CALDB
+## Calibration and CALDB <a id="toc-tag-mdtoc" name="calibration-and-caldb"></a>
 
 In order to run some of the mission-specific HEASoft tasks you will require calibration files for those missions (e.g., for _NuSTAR_ or _NICER_) as well as some mission non-specific general calibration information.
 
@@ -139,7 +139,7 @@ Instructions and more information on the [The HEASARC Calibration Database](http
 
 For specific missions see the [Latest CALDB Files for Supported Missions](https://heasarc.gsfc.nasa.gov/docs/heasarc/caldb/caldb_supported_missions.html) web page.
 
-### General calibration
+### General calibration <a id="toc-tag-mdtoc" name="general-calibration"></a>
 
 Follow the [How to Install a Calibration Database](https://heasarc.gsfc.nasa.gov/docs/heasarc/caldb/install.html) instructions.
 
@@ -161,7 +161,7 @@ export CALDB=/Users/your_path/caldb
 source $CALDB/software/tools/caldbinit.sh
 ```
 
-### NuSTAR calibration
+### NuSTAR calibration <a id="toc-tag-mdtoc" name="nustar-calibration"></a>
 
 Up-to-date as of 2023-01-20. See [Latest CALDB Files for Supported Missions](https://heasarc.gsfc.nasa.gov/docs/heasarc/caldb/caldb_supported_missions.html). Note that at the moment a patch file is required for NuSTAR.
 
@@ -173,7 +173,7 @@ wget https://heasarc.gsfc.nasa.gov/FTP/caldb/data/nustar/fpm/goodfiles_nustar_fp
 tar -zxvf goodfiles_nustar_fpm_clockcor_20221229.tar.gz
 ```
 
-## Running XSPEC on the group servers
+## Running XSPEC on the group servers <a id="toc-tag-mdtoc" name="running-xspec-on-the-group-servers"></a>
 
 HEASoft 6.29 is installed on the astrophysics group server.
 
@@ -196,6 +196,6 @@ To build additional models, enable the version 9 developer toolset in your shell
 scl enable devtoolset-9 bash
 ```
 
-## Learning to use XSPEC
+## Learning to use XSPEC <a id="toc-tag-mdtoc" name="learning-to-use-xspec"></a>
 
 See the [XSPEC instruction manual](https://heasarc.gsfc.nasa.gov/docs/software/heasoft/xanadu/xspec/manual/XspecManual.html) which includes a [walk through tutorial](https://heasarc.gsfc.nasa.gov/docs/software/heasoft/xanadu/xspec/manual/node35.html).

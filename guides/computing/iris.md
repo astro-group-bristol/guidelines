@@ -1,5 +1,13 @@
 # IRIS
 
+<!--BEGIN TOC-->
+## Table of Contents
+1. [Getting access](#getting-access)
+2. [Usage](#usage)
+    1. [Python](#python)
+
+<!--END TOC-->
+
 - [Homepage](https://www.iris.ac.uk/)
 
 The cluster is essentially a standard Slurm cluster, though with some caveats. The cluster is built across two different compute clouds, and hence there are two main job queues and two different shared filesystems.
@@ -24,7 +32,7 @@ MaxJobCount             = 100000
 
 Note: For the Euclid allocations at least there is almost zero usage so even large array jobs will run instantly
 
-## Getting access
+## Getting access <a id="toc-tag-mdtoc" name="getting-access"></a>
 
 Euclid:UK members have access to IRIS through annual applications. Individual members don't need to apply to IRIS. Instead they need to fill a form that goes to the Euclid:UK Coordination Group (EUCG). The form is found on the [Euclid:UK redmine](https://euclid.roe.ac.uk/projects/euclid-uk/wiki)
 
@@ -32,7 +40,7 @@ You will then be emailed with further instructions.
 
 General access can be requested through the annual call.
 
-## Usage
+## Usage <a id="toc-tag-mdtoc" name="usage"></a>
 
 - For more on Slurm see [here](../general/slurm.md)
 
@@ -48,7 +56,7 @@ There is also no default output file location so make sure to define in the sbat
 #SBATCH --output=/mnt/cam/username/code_directory/slurm_output/%j.out
 ```
 
-### Python
+### Python <a id="toc-tag-mdtoc" name="python"></a>
 
 Python is available in `/usr/bin/python`, however this is limited in packages accessible etc.
 

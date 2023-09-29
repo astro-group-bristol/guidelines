@@ -3,17 +3,16 @@
 Microsoft's VSCode is gaining remote editor support, particularly [remote development over ssh](https://code.visualstudio.com/docs/remote/ssh-tutorial), which can be used with the astrophysics servers at Bristol.
 
 <!--BEGIN TOC-->
-
 ## Table of Contents
-
 1. [Setting up the VSCode SSH extension](#setting-up-the-vscode-ssh-extension)
 2. [SSH tunnelling](#ssh-tunnelling)
 3. [Connecting to the tunnel in VSCode](#connecting-to-the-tunnel-in-vscode)
-4. [Using the extension](#using-the-extension)
-   1. [Navigating and editing files](#navigating-and-editing-files)
-   2. [Opening terminals](#opening-terminals)
-   3. [Executing code remotely](#executing-code-remotely)
-5. [Disconnecting](#disconnecting)
+4. [Connecting through VSCode](#connecting-through-vscode)
+5. [Using the extension](#using-the-extension)
+    1. [Navigating and editing files](#navigating-and-editing-files)
+    2. [Opening terminals](#opening-terminals)
+    3. [Executing code remotely](#executing-code-remotely)
+6. [Disconnecting](#disconnecting)
 
 <!--END TOC-->
 
@@ -123,7 +122,7 @@ Once connected, in the bottom left corner the connection should be displayed:
 <img width="400" src="./assets/remote-connection.png"/>
 </p>
 
-## Connecting through VSCode
+## Connecting through VSCode <a id="toc-tag-mdtoc" name="connecting-through-vscode"></a>
 
 VSCode also has the ability to access the astro servers with an `ssh` command in VSCode. With the previous "Connect to Host..." option above, select "+ Add New SSH Host...". This will show a prompt to enter a command. You will need to enter something like the following:
 

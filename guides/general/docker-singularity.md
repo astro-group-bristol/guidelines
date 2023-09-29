@@ -3,13 +3,11 @@
 _This guide is heavily work-in-progress, as reproducible environment and development containers is a very broad topic. Please open an issue if something is unclear._
 
 <!--BEGIN TOC-->
-
 ## Table of Contents
-
 1. [Singularity](#singularity)
-   1. [Quickstart](#quickstart)
-   2. [Running docker containers on the astrophysics servers](#running-docker-containers-on-the-astrophysics-servers)
-   3. [X11 support](#x11-support)
+    1. [Quickstart](#quickstart)
+    2. [Running docker containers on the astrophysics servers](#running-docker-containers-on-the-astrophysics-servers)
+    3. [X11 support](#x11-support)
 
 <!--END TOC-->
 

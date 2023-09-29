@@ -1,6 +1,13 @@
 # Computing tricks
 
-## Persistent jobs
+<!--BEGIN TOC-->
+## Table of Contents
+1. [Persistent jobs](#persistent-jobs)
+2. [Running jobs in parallel](#running-jobs-in-parallel)
+
+<!--END TOC-->
+
+## Persistent jobs <a id="toc-tag-mdtoc" name="persistent-jobs"></a>
 
 To keep jobs running, even after you've logged off, use the "no hangup" command
 
@@ -8,7 +15,7 @@ To keep jobs running, even after you've logged off, use the "no hangup" command
 nohup ./python my_8_hour_script.py &
 ```
 
-## Running jobs in parallel
+## Running jobs in parallel <a id="toc-tag-mdtoc" name="running-jobs-in-parallel"></a>
 
 > THIS IS WHY WE NEED A SCHEDULER -Fergus
 

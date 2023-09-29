@@ -1,14 +1,23 @@
 # How to be an SSH Master.
 
+<!--BEGIN TOC-->
+## Table of Contents
+1. [Table of Contents](#table-of-contents)
+2. [.ssh/config - SSH config file](#-ssh/config---ssh-config-file)
+3. [Using SSH Keys](#using-ssh-keys)
+4. [Adding SSH key to .ssh/config](#adding-ssh-key-to--ssh/config)
+
+<!--END TOC-->
+
 This guide will help you use `ssh` more effectively and improve your experience remoting into the astrophyiscs servers.
 
-## Table of Contents
+## Table of Contents <a id="toc-tag-mdtoc" name="table-of-contents"></a>
 
 1. [.ssh/config - SSH configuration file](#sshconfig---ssh-config-file)
 2. [Using SSH Keys](#using-ssh-keys)
 3. [Adding SSH Key to .ssh/config](#adding-ssh-key-to-sshconfig)
 
-## .ssh/config - SSH config file
+## .ssh/config - SSH config file <a id="toc-tag-mdtoc" name="-ssh/config---ssh-config-file"></a>
 
 You probably know how to use the `ssh` command from the terminal to access the astrophysics servers, but the last thing you would want to do is type it out every time. This gets just gets tedious.
 
@@ -53,7 +62,7 @@ Instead we can save our `ssh` connection details in the ssh configuration file. 
 
    Make sure you replace `AQUILA_ADDRESS`, `TYPHON_ADDRESS` and `USERNAME` with their addresses and your username and save the file. With `vim` this can be done with `:wq` in command mode (to enter command mode press ESC key). Then try it out! Simply type `ssh aquila` or `ssh typhon` into the commandline, insert your password(s) and your in!
 
-## Using SSH Keys
+## Using SSH Keys <a id="toc-tag-mdtoc" name="using-ssh-keys"></a>
 
 If you do not want to keep inserting your password, you can instead use a SSH key to authenticate your connection.
 
@@ -86,7 +95,7 @@ Note: you only need to send the public key to AQUILA for it to work on all the s
 
 You should test that this worked by remoting into the server, you should get a passphrase prompt (or no prompt if you didn't set a passphrase).
 
-## Adding SSH key to .ssh/config
+## Adding SSH key to .ssh/config <a id="toc-tag-mdtoc" name="adding-ssh-key-to--ssh/config"></a>
 
 To add this key to your config file, add the additional line, `IdentityFile` and the location of the private key, for the appropriate Host.
 

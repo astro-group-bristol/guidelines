@@ -4,6 +4,19 @@
 
 # Slurm Scheduler
 
+<!--BEGIN TOC-->
+## Table of Contents
+1. [Useful links](#useful-links)
+2. [Examples](#examples)
+3. [Quick reference](#quick-reference)
+4. [Submitting multiple jobs](#submitting-multiple-jobs)
+5. [Arrays jobs](#arrays-jobs)
+6. [Modules system](#modules-system)
+    1. [Overview](#overview)
+    2. [Using Modules in Slurm Jobs](#using-modules-in-slurm-jobs)
+
+<!--END TOC-->
+
 Slurm is the system used by (many) HPC facilities to manage the submission, queueing and running of jobs.
 
 The key features of a queueing system:
@@ -16,11 +29,11 @@ The key features of a queueing system:
 Login nodes are intended for basic tasks such as uploading data, managing files, compiling software, editing scripts, and checking on or managing your jobs. Small-scale interactive work may also be acceptable if your resource requirements are minimal.
 Otherwise, all jobs must be submitted to the queue.
 
-## Useful links
+## Useful links <a id="toc-tag-mdtoc" name="useful-links"></a>
 
 - [Bristol training](https://www.acrc.bris.ac.uk/protected/hpc-docs/training/intro-to-hpc-slurm/summary.html)
 
-## Examples
+## Examples <a id="toc-tag-mdtoc" name="examples"></a>
 
 Example submit script name `test_job.sh`:
 
@@ -49,7 +62,7 @@ This will produce an output like the following:
 Submitted batch job 3955481
 ```
 
-## Quick reference
+## Quick reference <a id="toc-tag-mdtoc" name="quick-reference"></a>
 
 Useful `#SBATCH` options include:
 
@@ -82,7 +95,7 @@ Receiving emails when your job starts/stops running:
 
 Documentation on all available #SBATCH options and their use are available here: https://slurm.schedmd.com/sbatch.html
 
-## Submitting multiple jobs
+## Submitting multiple jobs <a id="toc-tag-mdtoc" name="submitting-multiple-jobs"></a>
 
 Instead of using one script to generate multiple submit scripts that each have to be `sbatch`ed, use the `<<-KEYWORD` script `KEYWORD` bash syntax to sbatch files on the fly.
 
@@ -129,7 +142,7 @@ done
 - Here the `END_SUBMIT` keywords are surrounding the text that would have been the individual bash scripts before.
 - The example above will now submit 12 separate jobs, each with the respective parameters.
 
-## Arrays jobs
+## Arrays jobs <a id="toc-tag-mdtoc" name="arrays-jobs"></a>
 
 | Resource     | MaxArraySize |
 | ------------ | ------------ |
@@ -192,13 +205,13 @@ echo $MISSINGID
 python ./main.py $MISSINGID
 ```
 
-## Modules system
+## Modules system <a id="toc-tag-mdtoc" name="modules-system"></a>
 
 - [Bristol documentation](https://www.acrc.bris.ac.uk/protected/bc4-docs/software/index.html#using-modules)
 
 Slurm is usually tightly coupled with the modules system, which allows you to load in specific tools or compiler version in your job.
 
-### Overview
+### Overview <a id="toc-tag-mdtoc" name="overview"></a>
 
 To see all available modules, use
 
@@ -242,7 +255,7 @@ To remove all currently loaded modules (I.e. reset your modules) use
 module purge <module-name?
 ```
 
-### Using Modules in Slurm Jobs
+### Using Modules in Slurm Jobs <a id="toc-tag-mdtoc" name="using-modules-in-slurm-jobs"></a>
 
 Module commands are used afer the `SBATCH` pragmas and before your program is run. For example
 

@@ -7,11 +7,9 @@
 This repository contains some general information and coding practices within the organization.
 
 <!--BEGIN TOC-->
-
 ## Table of Contents
-
 1. [In this repository](#in-this-repository)
-   1. [Guides](#guides)
+    1. [Guides](#guides)
 2. [Creating new repositories](#creating-new-repositories)
 3. [GitHub Workflows](#github-workflows)
 4. [Questions and Queries](#questions-and-queries)

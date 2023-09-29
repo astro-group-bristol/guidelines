@@ -1,6 +1,15 @@
 # Astro group servers
 
-## Getting access (for members of the department only)
+<!--BEGIN TOC-->
+## Table of Contents
+1. [Getting access (for members of the department only)](#getting-access-for-members-of-the-department-only)
+2. [Be NICE](#be-nice)
+3. [Typhon](#typhon)
+    1. [GPU](#gpu)
+
+<!--END TOC-->
+
+## Getting access (for members of the department only) <a id="toc-tag-mdtoc" name="getting-access-for-members-of-the-department-only"></a>
 
 Ask Rhys Morris.
 
@@ -24,13 +33,13 @@ ssh username@<server-name>.star.bris.ac.uk
 
 You will then be promoted to enter your password.
 
-## Be NICE
+## Be NICE <a id="toc-tag-mdtoc" name="be-nice"></a>
 
 See [here about `ionice`](https://data-flair.training/blogs/ionice-command-in-linux/)
 
-## Typhon
+## Typhon <a id="toc-tag-mdtoc" name="typhon"></a>
 
-### GPU
+### GPU <a id="toc-tag-mdtoc" name="gpu"></a>
 
 Typhon has a GPU! NVIDIA TU104GL (Tesla T4) 2560 cores, 16gb RAM Turing cores! This is a AI specific GPU and so is best suited for training an ML model.
 

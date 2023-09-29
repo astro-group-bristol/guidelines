@@ -1,6 +1,19 @@
 # BlueCrystal and BluePebble
 
-## BlueCrystal Phase 4
+<!--BEGIN TOC-->
+## Table of Contents
+1. [BlueCrystal Phase 4](#bluecrystal-phase-4)
+    1. [Usage](#usage)
+2. [Useful links](#useful-links)
+3. [Blue Pebble](#blue-pebble)
+    1. [Getting access](#getting-access)
+    2. [Usage](#usage)
+    3. [Storage](#storage)
+        1. [Transferring files to Phaethon example](#transferring-files-to-phaethon-example)
+
+<!--END TOC-->
+
+## BlueCrystal Phase 4 <a id="toc-tag-mdtoc" name="bluecrystal-phase-4"></a>
 
 Phase 4 has the following hardware:
 
@@ -8,7 +21,7 @@ Phase 4 has the following hardware:
 - There are 17 extra high memory nodes, each of which has 512 GiB of RAM.
 - There are 32 GPU nodes with two cards each, plus 1 GPU in a login node, totalling 65 GPUs.
 
-### Usage
+### Usage <a id="toc-tag-mdtoc" name="usage"></a> <a id="toc-tag-mdtoc" name="usage"></a>
 
 BlueCrystal uses [Slurm](../general/slurm.md).
 
@@ -26,13 +39,13 @@ sacctmgr show user withassoc format=account where user=$USER
 
 More information and FAQ answers are available in the [HPC documentation](https://www.acrc.bris.ac.uk/protected/hpc-docs/job_types/accounting.html).
 
-## Useful links
+## Useful links <a id="toc-tag-mdtoc" name="useful-links"></a>
 
 - [Connecting to Blue Crystal](https://www.acrc.bris.ac.uk/protected/hpc-docs/connecting/index.html)
 - [Introduction to HPC](https://www.acrc.bris.ac.uk/protected/hpc-docs/introduction/index.html)
 - [General HPC documentaton](https://www.acrc.bris.ac.uk/protected/hpc-docs/index.html)
 
-## Blue Pebble
+## Blue Pebble <a id="toc-tag-mdtoc" name="blue-pebble"></a>
 
 - [General information](https://www.star.bris.ac.uk/local/bluepebble.html)
 
@@ -47,7 +60,7 @@ Standard Nodes
 - erating System
 - GNU/Linux (CentOS 7)
 
-### Getting access
+### Getting access <a id="toc-tag-mdtoc" name="getting-access"></a>
 
 In order to request access bluepebble compute and storage, you need to use the [webform](here:https://www.acrc.bris.ac.uk/login-area/apply.cgi).
 
@@ -75,7 +88,7 @@ You can find your project code by running the following line of code:
 sacctmgr show user withassoc format=account where user=$USER
 ```
 
-### Storage
+### Storage <a id="toc-tag-mdtoc" name="storage"></a>
 
 Our storage is
 
@@ -89,7 +102,7 @@ This is divided into two parts, one part called `diana` (around 150Tb) is for So
 
 When you request access, you must request a disk space quota (see below). There is about 150Tb in `astro_users` and currently it is not very full, use your discretion when requesting space, 20Tb is probably a reasonable starting place.
 
-#### Transferring files to Phaethon example
+#### Transferring files to Phaethon example <a id="toc-tag-mdtoc" name="transferring-files-to-phaethon-example"></a>
 
 After your account has been created, and you have logged in to check access, then files can be transferred using a command like the following.
 
