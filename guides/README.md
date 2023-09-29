@@ -1,5 +1,9 @@
 # Guides
 
+Learn how to contribute to our guides and other git projects:
+
+- [External: First Contributors](https://github.com/firstcontributions/first-contributions)
+
 ## General
 
 - [Become an SSH master](./general/ssh-master-user.md)
