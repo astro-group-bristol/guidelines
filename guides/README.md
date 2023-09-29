@@ -8,7 +8,7 @@ Learn how to contribute to our guides and other git projects:
 
 - [Become an SSH master](./general/ssh-master-user.md)
 - [VSCode secure remote development with the Bristol servers](./general/vs-code-ssh.md)
-- [Setting up HEASoft (./general/which includes XSPEC)](xspec-setup.md)
+- [Setting up HEASoft (which includes XSPEC)](./general/xspec-setup.md)
 - [Setting up SAS](./general/sas-setup.md)
 - [Docker & Singularity](./general/docker-singularity.md)
 - [Running docker containers on the Bristol servers](./general/docker-singularity.md#running-docker-containers-on-the-astrophysics-servers)
